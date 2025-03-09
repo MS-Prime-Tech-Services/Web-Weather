@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hi" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मौसम विजुअलाइज़ेशन</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="controls">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="cityInput" placeholder="शहर का नाम दर्ज करें">
+            <button class="btn btn-secondary" id="searchButton">खोजें</button>
+        </div>
+    </div>
+    <script>
+        const API_KEY = "{{ api_key }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
